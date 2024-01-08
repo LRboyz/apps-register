@@ -8,14 +8,16 @@ import {
   turboIntegrations,
 } from "@/data/turbo-integrations"
 import { LuMenu } from "react-icons/lu"
+
+
 import { siteConfig } from "@/config/site"
 import { cn } from "@/lib/utils"
-import {
-  Accordion,
-  AccordionContent,
-  AccordionItem,
-
-} from "@/components/ui/accordion"
+// import {
+//   Accordion,
+//   AccordionContent,
+//   AccordionItem,
+//   AccordionTrigger,
+// } from "@/components/ui/accordion"
 import { Button } from "@/components/ui/button"
 import { ScrollArea } from "@/components/ui/scroll-area"
 import { Separator } from "@/components/ui/separator"
@@ -26,6 +28,7 @@ import { ModeToggle } from "../shared/mode-toggle"
 
 export function MobileNav() {
   const [open, setOpen] = useState(false)
+
   return (
     <Sheet open={open} onOpenChange={setOpen}>
       <div className="flex w-full items-center justify-between md:hidden">
@@ -71,38 +74,40 @@ export function MobileNav() {
         </div>
         <ScrollArea className="my-4 mr-4 h-[calc(100vh-8rem)] pb-10">
           <div className="flex flex-col space-y-4">
-            <Accordion type="single" collapsible className="mx-auto w-full">
+            {/* <Accordion type="single" collapsible className="mx-auto w-full">
               <AccordionItem value="integrations">
-
-                <AccordionContent>
-                  <ul className="flex flex-col gap-2">
-                    {integrationCategories.map((category) => (
-                      <>
-                        <h4 className="text-sm font-medium leading-none">
-                          {category.charAt(0).toUpperCase() + category.slice(1)}
-                        </h4>
-                        <Separator className="col-span-3" />
-                        {Object.values(turboIntegrations)
-                          .filter(
-                            (integration) => integration.category === category
-                          )
-                          .map(({ name, href, imgDark, imgLight }) => (
-                            <NavMenuListItem
-                              key={name}
-                              name={name}
-                              href={href}
-                              lightImage={imgDark}
-                              darkImage={imgLight}
-                              onOpenChange={setOpen}
-                            />
-                          ))}
-                      </>
+                <AccordionTrigger className="text-base font-medium">
+                  Integrations
+                </AccordionTrigger>
+                <AccordionContent> */}
+            <ul className="flex flex-col gap-2">
+              {integrationCategories.map((category) => (
+                <>
+                  <h4 className="text-sm font-medium leading-none">
+                    {category.charAt(0).toUpperCase() + category.slice(1)}
+                  </h4>
+                  <Separator className="col-span-3" />
+                  {Object.values(turboIntegrations)
+                    .filter(
+                      (integration) => integration.category === category
+                    )
+                    .map(({ name, href, imgDark, imgLight }) => (
+                      <NavMenuListItem
+                        key={name}
+                        name={name}
+                        href={href}
+                        lightImage={imgDark}
+                        darkImage={imgLight}
+                        onOpenChange={setOpen}
+                      />
                     ))}
-                  </ul>
-                </AccordionContent>
+                </>
+              ))}
+            </ul>
+            {/* </AccordionContent>
               </AccordionItem>
 
-            </Accordion>
+            </Accordion> */}
 
             <Separator />
           </div>

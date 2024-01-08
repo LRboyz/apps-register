@@ -1,6 +1,6 @@
 import { atom, useAtom, WritableAtom } from "jotai"
 
-let strAtom: WritableAtom<string, string>
+let strAtom: WritableAtom<string, any,any>
 if (typeof window !== "undefined") {
   strAtom = atom(window?.localStorage.getItem("theme") || "system")
 } else {

@@ -108,7 +108,7 @@ const demos = [
   {
     title: "AppleID",
     description:
-      "Apple ID（Apple标识）是由苹果公司提供的一种帐户体系，它允许用户在苹果生态系统中使用各种服务和设备。",
+      "Apple ID（Apple标识）是由苹果公司提供的一种帐户体系。拥有一个海外苹果ID可无限下载海内外热门App。",
     href: siteConfig.links.telegram,
     demo: (
       <div className="flex items-center justify-center space-x-20">
@@ -155,9 +155,8 @@ function DemoCard({ title, description, href, demo, large }: DemoCardProps) {
   return (
     <motion.div
       variants={fadeUpVariant()}
-      className={`relative col-span-1 overflow-hidden rounded-xl border bg-card px-4 shadow-sm transition-shadow hover:shadow-md ${
-        large ? "md:col-span-2" : ""
-      }`}
+      className={`relative col-span-1 overflow-hidden rounded-xl border bg-card px-4 shadow-sm transition-shadow hover:shadow-md ${large ? "md:col-span-2" : ""
+        }`}
     >
       <div className="flex h-60 items-center justify-center">{demo}</div>
       <div className="mx-auto max-w-xl text-center">

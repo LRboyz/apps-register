@@ -74,15 +74,10 @@ export function MobileNav() {
         </div>
         <ScrollArea className="my-4 mr-4 h-[calc(100vh-8rem)] pb-10">
           <div className="flex flex-col space-y-4">
-            {/* <Accordion type="single" collapsible className="mx-auto w-full">
-              <AccordionItem value="integrations">
-                <AccordionTrigger className="text-base font-medium">
-                  Integrations
-                </AccordionTrigger>
-                <AccordionContent> */}
+
             <ul className="flex flex-col gap-2">
-              {integrationCategories.map((category) => (
-                <>
+              {integrationCategories.map((category, index) => (
+                <div key={index}>
                   <h4 className="text-sm font-medium leading-none">
                     {category.charAt(0).toUpperCase() + category.slice(1)}
                   </h4>
@@ -101,13 +96,10 @@ export function MobileNav() {
                         onOpenChange={setOpen}
                       />
                     ))}
-                </>
+                </div>
               ))}
             </ul>
-            {/* </AccordionContent>
-              </AccordionItem>
 
-            </Accordion> */}
 
             <Separator />
           </div>

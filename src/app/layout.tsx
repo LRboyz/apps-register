@@ -9,6 +9,7 @@ import { fontSans } from "@/lib/fonts"
 import { cn } from "@/lib/utils"
 import { Toaster } from "@/components/ui/toaster"
 import RootProvider from "@/components/providers/root-provider"
+import Script from "next/script"
 
 const url = env.NEXT_PUBLIC_SITE_URL || "http://localhost:3000"
 
@@ -19,13 +20,13 @@ export const metadata = {
   icons: {
     icon: "/favicon.ico",
   },
-  // themeColor: "#feefc4",
 }
 
 export default function RootLayout({ children }: { children: ReactNode }) {
   return (
     <>
       <html lang="en" suppressHydrationWarning>
+        <Script defer src="https://us.umami.is/script.js" data-website-id="7fb2b625-dbaa-4454-a588-af3aebdf33a3"></Script>
         <body
           className={cn(
             "min-h-screen bg-background font-sans antialiased",

@@ -49,8 +49,8 @@ function MainNavMenu() {
           <NavigationMenuTrigger>服务</NavigationMenuTrigger>
           <NavigationMenuContent className="max-h-[768px] overflow-y-scroll">
             <ul className="grid w-[400px] gap-3 p-4 md:w-[500px] md:grid-cols-2 lg:w-[768px] lg:grid-cols-3">
-              {integrationCategories.map((category) => (
-                <>
+              {integrationCategories.map((category, index) => (
+                <div key={index}>
                   <h4
                     key={category}
                     className="text-lg font-medium leading-none md:col-span-2 lg:col-span-3"
@@ -70,7 +70,7 @@ function MainNavMenu() {
                         darkImage={imgLight}
                       />
                     ))}
-                </>
+                </div>
               ))}
             </ul>
           </NavigationMenuContent>

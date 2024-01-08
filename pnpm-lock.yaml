@@ -74,9 +74,6 @@ dependencies:
   jotai:
     specifier: ^2.6.1
     version: 2.6.1(@types/react@18.2.47)(react@18.2.0)
-  luxon:
-    specifier: ^3.4.4
-    version: 3.4.4
   next:
     specifier: 14.0.4
     version: 14.0.4(react-dom@18.2.0)(react@18.2.0)
@@ -3122,11 +3119,6 @@ packages:
     dependencies:
       yallist: 4.0.0
     dev: true
-
-  /luxon@3.4.4:
-    resolution: {integrity: sha512-zobTr7akeGHnv7eBOXcRgMeCP6+uyYsczwmeRCauvpvaAltgNyTbLH/+VaEAPUeWBT+1GuNmz4wC/6jtQzbbVA==, tarball: https://registry.npmmirror.com/luxon/-/luxon-3.4.4.tgz}
-    engines: {node: '>=12'}
-    dev: false
 
   /mdast-util-from-markdown@2.0.0:
     resolution: {integrity: sha512-n7MTOr/z+8NAX/wmhhDji8O3bRvPTV/U0oTCaZJkjhPSKTPhS3xufVhKGF8s1pJ7Ox4QgoIU7KHseh09S+9rTA==, tarball: https://registry.npmmirror.com/mdast-util-from-markdown/-/mdast-util-from-markdown-2.0.0.tgz}
